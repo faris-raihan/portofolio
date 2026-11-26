@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Satoshi", system-ui, sans-serif;
+  --font-display: "EB Garamond", "Apple Garamond", Georgia, serif;
+  --color-paper: #f4f4f4;
+  --color-leaf: #53b153;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper font-sans text-black antialiased;
+  }
+  section[id] {
+    scroll-margin-top: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
